@@ -17,9 +17,34 @@ background(225, 225, 225)
 }
 
 function draw() {
+
+for(let i=0;i<windowWidth/2;i=i+10){
+  line(i, 0, i, windowHeight)
+}
+
+for(let i=0;i<windowHeight/2;i=i+10){
+  line(0, i, windowHeight, i)
+}
+
+for(let i=0;i<100;i++){
+  ellipse(random(windowWidth), random(windowHeight), 20, 20)
+}
+
    if(mouseIsPressed){
     background(redVar, greenVar, blueVar)
-    image(tricorn, windowWidth / 2, windowHeight / 2)
+    for(let i=0; i<2048;i++){
+    image(tricorn, random(windowWidth), random(windowHeight), 30, 30)
+  }
+
+  for(let i=0;i<windowHeight;i=i+10){
+  line(0, i, windowHeight, i)
+}
+
+
+for(let i=0;i<windowWidth;i=i+10){
+  line(i, 0, i, windowHeight)
+}   
+  
    }
 
    else if(keyIsPressed){
@@ -30,3 +55,8 @@ function draw() {
    }
    text('hi', 300, 400)
  }
+
+ function windowResized(){
+  resizeCanvas(windowWidth, windowHeight)
+}
+

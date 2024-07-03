@@ -30,3 +30,7 @@ function draw() {
     image(fullmoonpng6, windowWidth / 2, windowHeight / 2)
    }
 }
+
+function windowResized(){
+  resizeCanvas(windowWidth, windowHeight)
+}
