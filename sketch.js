@@ -28,6 +28,7 @@ function draw() {
    }
    if(keyIsPressed){
     image(fullmoonpng6, windowWidth / 2, windowHeight / 2)
+    background(0,0,10)
    }
 }
 
